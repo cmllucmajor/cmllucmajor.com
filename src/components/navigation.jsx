@@ -46,13 +46,19 @@ export class Navigation extends Component {
             id="bs-example-navbar-collapse-1"
           >
             <div>
-              <span onClick={this.onChangeLang} className="nav navbar-nav navbar-right">
-                  <a  className="page-scroll">
-                    {(this.state.lang === 'cast')? 'Catala': 'Castellano'}
-                  </a>
-              </span>
+              <div 
+                onClick={this.onChangeLang}
+                className="nav navbar-nav navbar-right"
+                style={{zIndex: 6}}
+              >
+                  <img
+                    src={(this.state.lang === 'cast')? 'img/catala.gif': 'img/castella.gif'}
+                    alt=""
+                  />
+                    
+              </div>
             </div>
-            <ul className="nav navbar-nav navbar-right">
+            <ul className="nav navbar-nav navbar-right" style={{position:'relative', zIndex: -1}}>
               <li>
                 <a href="#features" className="page-scroll">
                   {this.state.data.queOfrecemos}

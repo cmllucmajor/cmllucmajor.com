@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // ES modules
-import ReactDOMServer from 'react-dom/server';
+// import ReactDOMServer from 'react-dom/server';
 
 const element = <React.StrictMode>
   <App />
@@ -14,7 +14,7 @@ ReactDOM.render(
   element,
   document.getElementById('root')
   );
-  console.log(ReactDOMServer.renderToString(element))
+  // console.log(ReactDOMServer.renderToString(element))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
